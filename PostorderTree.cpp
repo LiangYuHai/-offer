@@ -31,7 +31,7 @@ vector<int> Postorder_Iteratively(TreeNode* root){
     if(!root) return res;
     stack<TreeNode*> nodes;
     TreeNode* pre = nullptr;
-    while(!nodes.empty()){
+    while(!nodes.empty() || root){
         while(root){
             nodes.push(root);
             root = root->left;

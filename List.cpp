@@ -35,6 +35,7 @@ void DestoryList(ListNode* head){
         node = head;
     }
 }
+
 void AddToTail(ListNode* head, int value){
     if(!head)  {
         head = new ListNode(value);
