@@ -7,7 +7,7 @@ template <typename T>
 int helper(T data[], int start, int end){
     if(!data || start==end) return start;
     small = start-1;
-    for(int i = start; i < end-1; ++i){
+    for(int i = start; i < end; ++i){
         if(data[i]<data[end]) {
             ++small;
             if (small != i) {
