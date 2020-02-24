@@ -9,11 +9,14 @@ template<typename T> void CQueue<T>::appendTail(const T node) {
 }
 
 template<typename T> T CQueue<T>::deleteHead() {
-    while (!s1.empty()) {
-        T temp = s1.top();
-        s1.pop();
-        s2.push(temp);
+    if(s2.empty()){
+        while (!s1.empty()) {
+            T temp = s1.top();
+            s1.pop();
+            s2.push(temp);
+        }
     }
+
     if (s2.empty()) throw new exception("queue is empty.");
     else {
         T temp = s2.top();

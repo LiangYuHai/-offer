@@ -4,6 +4,7 @@
 
 #include "Tree.h"
 #include <cmath>
+
 int TreeDepth(TreeNode* root){
     if(!root) return 0;
     int left = TreeDepth(root->left);
@@ -35,7 +36,7 @@ bool IsBalanced2(TreeNode* root){
             root = root->left;
         }
         root = nodeStack.top();
-        if(!root->right || preNode == root->right) {
+        if(!root->right || preNode == root->right){
             nodeStack.pop();
             int leftDepth = 0;
             int rightDepth = 0;

@@ -23,6 +23,7 @@ int* ReorderOddEven(int* number, unsigned int length){
     }
     return number;
 }
+
 //将函数解耦，能够扩展问题，秒杀offer。
 int* Reorder(int* number, unsigned int length, bool (*func)(int)){
     if(number == nullptr || length <= 1) return number;

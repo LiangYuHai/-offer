@@ -61,7 +61,6 @@ int MoreThanHalfNum(int* data, const int length){
 
 
 //方法2 时间复杂度O（n），但无需修改data数组
-
 int MoreThanHalfNum2(int* data, int length){
     if(!data || length <= 0){
         InputInvalid = true;

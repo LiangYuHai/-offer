@@ -13,6 +13,7 @@ unsigned int GetListLength(ListNode* head){
     }
     return length;
 }
+
 ListNode* FindFirstCommonNode(ListNode* head1, ListNode* head2){
     if(!head1 || !head2) return nullptr;
     unsigned int length1 = GetListLength(head1);

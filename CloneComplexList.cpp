@@ -38,7 +38,6 @@ ComplexListNode* ReconnectNodes(ComplexListNode* head){
     ComplexListNode* cloneNode = pNode->next;
     pNode->next = cloneNode->next;
     pNode = pNode->next;
-
     while(pNode){
         cloneNode->next = pNode->next;
         cloneNode = cloneNode->next;

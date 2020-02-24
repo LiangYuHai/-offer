@@ -42,14 +42,13 @@ int transform(char c){
     else return 0;
 }
 int Excel(const string chars){
-    int position = chars.size();
+
     int res = 0;
     for(int i = 0; i < chars.size(); ++i){
-        if(transform(chars[i]) == 0){
+        if(transform(chars[i]) == 0) {
             throw new exception("Wrong input");
         }
-        --position;
-        res += pow(26,position)*transform(chars[i]);
+        res += res*26 + transform(chars[i]);
     }
     cout << res << endl;
     return res;

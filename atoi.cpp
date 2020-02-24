@@ -7,15 +7,13 @@ using namespace std;
 
 bool InputInvalid = true;
 long long atoi(char* str){
-    if(!str || *str == '\0') {
+    if(!str) {
         return 0;
     }
     bool minus = false;
     if(*str == '+') str++;
-    else if(*str == '-'){
+    if(*str == '-'){
         minus = true;
-        ++str;
-    }else{
         ++str;
     }
     if(*str == '\0'){

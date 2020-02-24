@@ -25,8 +25,8 @@ double* PrintProbability(int n){
         PrintProbability(n, n, res, i);
     }
     int total = pow(MAX_VALUE, n);
-    double res2[MAX_VALUE*n-n+1];
-    for(auto i = 0; i < MAX_VALUE*n-n+1; ++i){
+    double res2[MAX_VALUE*n - n + 1];
+    for(auto i = 0; i < MAX_VALUE*n-n + 1; ++i){
         res2[i] = (double)res[i]/total;
     }
     return res2;
@@ -43,6 +43,7 @@ void PrintProbability2(int n){
         res[0][i] = 0;
         res[1][i] = 0;
     }
+
     for(int i = 1; i <= MAX_VALUE; ++i) res[0][i] = 1;
     int flag = 0;
     for(int k = 2; k <= n ; ++k){

@@ -31,9 +31,11 @@ void GetLeastKNumbers(int* data, int length, int k){
     int end = length-1;
     int index = Partition(data, start, end);
     while (index != k-1){
+
         if(index < k-1){
             index = Partition(data, index + 1, end);
         }
+
         if(index > k-1){
             index = Partition(data, start, index-1);
         }

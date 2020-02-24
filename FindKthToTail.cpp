@@ -1,4 +1,4 @@
-//面试15链表中导数第K个结点
+//面试15链表中倒数第K个结点
 // Created by Administrator on 2020/1/28 0028.
 //
 #include <iostream>

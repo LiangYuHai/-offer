@@ -6,7 +6,7 @@
 #include <iostream>
 
 bool Find(int* matrix, int rows, int columns, int number){
-    if(!matrix || !rows || !columns) return false;
+    if(!matrix || rows<1 || columns<1) return false;
     int row = 0, col = columns-1;
     while(row < rows && col >=0){
         if(matrix[row*columns + col] == number) return true;
@@ -16,7 +16,7 @@ bool Find(int* matrix, int rows, int columns, int number){
     return false;
 }
 
-
+1
 //================测试代码 test code ================
 
 void Test1(){

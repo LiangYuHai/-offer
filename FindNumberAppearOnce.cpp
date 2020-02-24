@@ -26,6 +26,7 @@ void FindNumberAppearOnce(int* data, int length, int* num1, int* num2){
         exclusiveOrRes ^= data[i];
     }
     unsigned int indexOf1 = GetFirst1Index(exclusiveOrRes);
+    *num1=*num2=0;
     for(int i = 0; i < length; ++i){
         if(IsIndexBit1(data[i], indexOf1)){
             *num1 ^= data[i];

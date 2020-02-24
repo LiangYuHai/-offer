@@ -15,6 +15,7 @@ int NumberOf1(int n){
     }
     return count;
 }
+
 //以上方法若n为负数将造成死循环；
 //虽然向右移动一位相当于除以2，但不能应尽力用右移运算，除法效率低。
 
@@ -40,6 +41,7 @@ int NumberOf1Optimized2(int n){
     }
     return count;
 }
+
 void test0(){
     int n = INT32_MAX;
     if(NumberOf1(n)==31){

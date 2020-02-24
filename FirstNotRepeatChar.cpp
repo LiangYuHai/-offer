@@ -19,11 +19,13 @@ char FirstNotRepeatChar(char* pString){
         hashTable[*p] ++;
         p++;
     }
+
     p = pString;
     while(*p != '\0'){
         if(hashTable[*p] == 1) return *p;
         p++;
     }
+
     return '\0';
 }
 
@@ -36,9 +38,11 @@ char FirstNotRepeatChar2(std::string& str){
         if(hashTable.find(i) == hashTable.end()) hashTable[i] = 1;
         else hashTable[i] ++ ;
     }
+
     for(auto & i : str){
         if(hashTable[i] == 1) return i;
     }
+
     return '\0';
 }
 
