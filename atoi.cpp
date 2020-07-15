@@ -22,7 +22,7 @@ long long atoi(char* str){
     long long number = 0;
     unsigned short int flag = minus ? 1 : -1;
     while(*str != '\0'){
-        if(*str < '0' || *str > '9' || (minus && number > 0x7fffffff) || (!minus && number < 0x80000000)) return 0;
+        if(*str < '0' || *str > '9' || (!minus && number > 0x7fffffff) || (minus && number < 0x80000000)) return 0;
         number = 10*number + flag*(*str - '0');
     }
     InputInvalid = false;

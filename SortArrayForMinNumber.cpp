@@ -52,6 +52,7 @@ int compare2(const void* str1, const void* str2){
     string strCombine2 = *(const string*)str2 + *(const string*)str1;
     return strCombine1 > strCombine2;
 }
+
 void SortArrayForMinNumber2(int* data, int length){
     if(!data || length <= 0) return ;
     string* strNumbers = new string[length];
@@ -64,6 +65,7 @@ void SortArrayForMinNumber2(int* data, int length){
     }
     cout << endl;
 }
+
 void test1(){
     int data[3] = {3,321,33};
     int length = sizeof(data)/sizeof(data[0]);

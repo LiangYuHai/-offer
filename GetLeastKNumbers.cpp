@@ -22,7 +22,7 @@ int Partition(int* data, int start, int end){
     int temp = data[end];
     data[end] = data[small];
     data[small] = temp;
-    return small
+    return small;
 }
 
 void GetLeastKNumbers(int* data, int length, int k){
@@ -70,4 +70,24 @@ void GetLeastNumbers(const vector<int>& data, multiset<int, greater< >>& leastNu
     for(auto iter = leastNumbers.begin(); iter != leastNumbers.end(); ++iter){
         cout << *iter << endl;
     }
+}
+
+#include <string>
+#include <algorithm>
+bool compare(string& a, string& b){
+    return a.back() > b.back();
+}
+int main(){
+    int n;
+    while(cin >> n){
+        vector<string> strs(n);
+        for(auto &i : strs){
+            cin >> i;
+        }
+        sort(strs.begin(), strs.end(), compare);
+        for(auto &i : strs){
+            cout << i << endl;
+        }
+    }
+
 }

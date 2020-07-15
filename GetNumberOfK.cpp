@@ -33,7 +33,7 @@ int GetLastK(int* data, int k, int start, int end){
             return middle;
         else
             start = ++middle;
-    return GetFirstK(data, k, start, end);
+    return GetLastK(data, k, start, end);
 }
 
 int GetNumberOfK(int* data, int k, int length){
@@ -41,4 +41,4 @@ int GetNumberOfK(int* data, int k, int length){
     int firstKIndex = GetFirstK(data, k, 0, length-1);
     int lastKIndex = GetLastK(data, k, 0, length-1);
     return lastKIndex-firstKIndex+1;
-} b
+}
