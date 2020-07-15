@@ -31,11 +31,13 @@ int main(){
     for(int i = 0; i < N; ++i){
         bool flag = true;
         for(int j = 0; j < N; ++j){
-            if(!follow[j][i]){
+            if(!follow[j][i] && j != i){
                 flag = false;
                 break;
             }
+
         }
+
         if(flag){
             ++res;
         }
