@@ -13,6 +13,7 @@ test_num = 100
 x = tf.placeholder(tf.float32, [None, 784])
 x_test = tf.placeholder(tf.float32, [784])
 
+#knn = tf.reduce_sum(tf.abs(tf.subtract(x, x_test)), reduction_indices=1)
 knn = tf.reduce_sum(tf.square(x - x_test), reduction_indices=1)
 
 with tf.Session() as sess:
