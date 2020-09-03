@@ -52,7 +52,7 @@ int main(){
                     cout << "start";
                     set<pair<int, int>> seen;
                     map<pair<int,int>, int> cache;
-                    int count = dfs(board, 0, 0, n, m, seen, 0, cache);
+                    int count = dfs(board, i, j, n, m, seen, 0, cache);
                     cout << count;
                 }
             }

@@ -6,7 +6,7 @@
 using namespace std;
 
 bool InputInvalid = true;
-long long atoi(char* str){
+int atoi(char* str){
     if(!str) {
         return 0;
     }

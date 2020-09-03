@@ -10,8 +10,6 @@
 using namespace std;
 void dfs(vector<int>& nums, vector<int>& wrong, vector<int>& weigth, int n, int index, int& cur_d , int& dis){
     if(index == n){
-
-
         dis = min(cur_d, dis);
     }else{
         if(cur_d > dis) return ;

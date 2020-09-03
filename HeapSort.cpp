@@ -27,8 +27,7 @@ void BuildMaxHeap(vector<int>& numbers){
         Heapify(numbers, i, len);
     }
 }
-//
-//
+
 //void Heapify(vector<int> numbers, int index, int len){
 //    int left = index*2+1;
 //    int right = index*2+2;

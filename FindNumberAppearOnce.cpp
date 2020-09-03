@@ -6,8 +6,7 @@
 
 unsigned int GetFirst1Index(int exclusiveOrRes){
     int index = 0;
-    int n = 1;
-    while(exclusiveOrRes & 0x1 != 1 && index <= 8*sizeof(int)){
+    while((exclusiveOrRes & 0x1) != 1 && index <= 8*sizeof(int)){
         exclusiveOrRes >> 1;
         index++;
     }
@@ -16,7 +15,7 @@ unsigned int GetFirst1Index(int exclusiveOrRes){
 
 bool IsIndexBit1(int num, int index){
     num >> index;
-    return num & 1 == 1;
+    return (num & 1) == 1;
 }
 
 void FindNumberAppearOnce(int* data, int length, int* num1, int* num2){

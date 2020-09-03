@@ -18,10 +18,10 @@ struct TreeNode{
 
 int solution(TreeNode* root, int& max_sum){
     if(!root) return 0;
-    int left = min(solution(root->left, max_sum), 0);
-    int right = min(solution(root->right, max_sum), 0);
+    int left = max(solution(root->left, max_sum), 0);
+    int right = max(solution(root->right, max_sum), 0);
     max_sum = max(root->val + left + right, max_sum);
-    return left > right ? left : right;
+    return left > right ? left + root->val : right + root->val;
 }
 
 int main(){

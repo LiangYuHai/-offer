@@ -1,6 +1,6 @@
 //
 // Created by Administrator on 2020/4/20 0020.
-//
+//最大池化
 
 #include <iostream>
 #include <vector>

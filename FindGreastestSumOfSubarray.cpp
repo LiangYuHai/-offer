@@ -2,7 +2,6 @@
 // Created by Administrator on 2020/2/1 0001.
 //
 bool InputInvalid = false
-
 int FindGreastestSumOfSubarray(int* data, int length){
     if(!data || length <=0){
         InputInvalid = true;

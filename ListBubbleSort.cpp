@@ -9,9 +9,10 @@ using namespace std;
 ListNode* ListBubbleSort(ListNode* head){
     if(!head || !head->next) return head;
     int len = 0;
-    while(head){
+    ListNode* temp = head;
+    while(temp){
         ++len;
-        head = head->next;
+        temp = temp->next;
     }
     ListNode* dummyHead = new ListNode(-1);
     dummyHead->next = head;
